@@ -176,36 +176,13 @@ admins/
 otp_codes/
 
 system_logs/
+
 ✔ User-level data isolation
 ✔ Role-based access control
 ✔ Secure Firestore rules
 
 ---
 
-# 🚀 Installation
-
-## Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-
-Environment variable:
-VITE_API_BASE_URL=http://localhost:8000
-
-Backend
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-
-Example .env configuration:
-
-FIREBASE_CREDENTIALS_PATH=...
-MODEL_PATH=...
-SHAP_BG_PATH=...
-SMTP_EMAIL=...
-SMTP_PASSWORD=...
 
 ☁ Deployment
 
@@ -263,68 +240,7 @@ DepreSense
 │   └── assets
 │
 └── docs
-👥 Contributors
-Name	Role
 
-Mohamed Zeedhan	ML Lead
-Mridul Bhattacharjee	Backend Developer
-Mohamed Muzni Mohamed Ziham	Frontend Developer
-☁ Deployment
-
-Production architecture:
-
-Frontend → Firebase Hosting
-Backend → Google Cloud Run
-Database → Firestore
-Authentication → Firebase Auth
-
-✔ Serverless
-✔ Auto-scaling
-✔ Pay-per-use infrastructure
-
-🔒 Security
-
-• Firebase Authentication
-• Email OTP verification
-• JWT token authorization
-• Role-based access control
-• HTTPS encryption
-• Firestore security rules
-
-🧪 Testing
-
-Backend uses pytest with extensive unit tests covering:
-
-• Prediction pipeline
-• SHAP explainability
-• API endpoints
-• Data validation
-
-Run tests:
-
-cd backend
-pytest
-📂 Project Structure
-DepreSense
-│
-├── frontend
-│   ├── components
-│   ├── pages
-│   ├── services
-│   └── contexts
-│
-├── backend
-│   ├── routes
-│   ├── services
-│   ├── models
-│   ├── schemas
-│   └── tests
-│
-├── output
-│   ├── model
-│   └── assets
-│
-└── docs
 👥 Contributors
 Name	Role
 Mohamed Zeedhan	ML Lead
