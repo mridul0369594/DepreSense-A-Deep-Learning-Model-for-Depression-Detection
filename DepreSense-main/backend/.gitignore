@@ -1,0 +1,44 @@
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# ── Virtual Environments ───────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+
+# ── Environment Files ──────────────────────────────────────
+.env
+
+# ── IDE Settings ───────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Firebase Service Account Keys ──────────────────────────
+config/firebase*.json
+
+# ── Uploaded EDF Files & Temp ──────────────────────────────
+uploads/
+temp/
+
+# ── Logs ───────────────────────────────────────────────────
+logs/*.log
+!logs/.gitkeep
+
+# ── Model Files (optional — uncomment to ignore) ──────────
+# *.h5
+# *.keras
+# *.pkl
+
+# ── OS-Specific ────────────────────────────────────────────
+.DS_Store
+Thumbs.db

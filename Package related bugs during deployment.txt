@@ -1,0 +1,7 @@
+These may happen due to package version conflicts. So downgrade version if it occurs:
+
+NumPy & Tensorflow version mismatch:
+python -c "import tensorflow as tf, numpy as np; print(tf.__version__, np.__version__)"
+
+
+Run this script if there are any numpy related issues when working with tensorflow. Check the tensorflow version and change the numpy version to a compatible one accordingly.

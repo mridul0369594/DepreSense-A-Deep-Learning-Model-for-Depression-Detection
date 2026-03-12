@@ -1,0 +1,100 @@
+metadata {
+  key: "serviceTitle"
+  value: "Cloud Firestore API"
+}
+metadata {
+  key: "containerInfo"
+  value: "depresense"
+}
+metadata {
+  key: "consumer"
+  value: "projects/depresense"
+}
+metadata {
+  key: "activationUrl"
+  value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense"
+}
+, locale: "en-US"
+message: "Cloud Firestore API has not been used in project depresense before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+, links {
+  description: "Google developers console API activation"
+  url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense"
+}
+]
+2026-02-26 05:52:07  WARNING   [app.routes.eeg]  Firestore metadata save failed (non-blocking): 403 Cloud Firestore API has not been used in project depresense before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "firestore.googleapis.com"
+}
+metadata {
+  key: "serviceTitle"
+  value: "Cloud Firestore API"
+}
+metadata {
+  key: "containerInfo"
+  value: "depresense"
+}
+metadata {
+  key: "consumer"
+  value: "projects/depresense"
+}
+metadata {
+  key: "activationUrl"
+  value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense"
+}
+, locale: "en-US"
+message: "Cloud Firestore API has not been used in project depresense before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+, links {
+  description: "Google developers console API activation"
+  url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense"
+}
+]
+2026-02-26 05:52:07  INFO      [depresense.api]  ← 201  119.1 ms  req_id=396872be91a240468ac9bc3a556ec05a
+2026-02-26 05:52:09  INFO      [depresense.api]  → GET /eeg/files  req_id=0070de2ac4a04b85b8355cc00d2dd4e0
+2026-02-26 05:52:09  DEBUG     [cachecontrol.controller]  Looking up "https://www.googleapis.com/robot/v1/metadata/x509/securetoken@system.gserviceaccount.com" in the cache
+2026-02-26 05:52:09  DEBUG     [cachecontrol.controller]  Current age based on date: 265
+2026-02-26 05:52:09  DEBUG     [cachecontrol.controller]  Freshness lifetime from max-age: 22494
+2026-02-26 05:52:09  DEBUG     [cachecontrol.controller]  The response is "fresh", returning cached response
+2026-02-26 05:52:09  DEBUG     [cachecontrol.controller]  22494 > 265
+2026-02-26 05:52:09  INFO      [app.middleware.auth_middleware]  Auth success  uid=GT8OYK8mLoMiQsHzTeVirSudIdC2  req_id=0070de2ac4a04b85b8355cc00d2dd4e0
+2026-02-26 05:52:09  INFO      [depresense.api]  Firestore LIST on eeg_files → error
+2026-02-26 05:52:09  ERROR     [app.services.firestore_service]  Failed to list EEG files for GT8OYK8mLoMiQsHzTeVirSudIdC2: 403 Cloud Firestore API has not been used in project depresense before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "firestore.googleapis.com"
+}
+metadata {
+  key: "serviceTitle"
+  value: "Cloud Firestore API"
+}
+metadata {
+  key: "containerInfo"
+  value: "depresense"
+}
+metadata {
+  key: "consumer"
+  value: "projects/depresense"
+}
+metadata {
+  key: "activationUrl"
+  value: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense"
+}
+, locale: "en-US"
+message: "Cloud Firestore API has not been used in project depresense before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+, links {
+  description: "Google developers console API activation"
+  url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense"
+}
+]
+2026-02-26 05:52:09  INFO      [depresense.api]  ← 200  56.5 ms  req_id=0070de2ac4a04b85b8355cc00d2dd4e0
+2026-02-26 05:52:11  INFO      [depresense.api]  → POST /predictions/predict  req_id=1fd814cd21264060b380e8e82a5ac094
+2026-02-26 05:52:11  DEBUG     [cachecontrol.controller]  Looking up "https://www.googleapis.com/robot/v1/metadata/x509/securetoken@system.gserviceaccount.com" in the cache
+2026-02-26 05:52:11  DEBUG     [cachecontrol.controller]  Current age based on date: 267
+2026-02-26 05:52:11  DEBUG     [cachecontrol.controller]  Freshness lifetime from max-age: 22494
+2026-02-26 05:52:11  DEBUG     [cachecontrol.controller]  The response is "fresh", returning cached response
+2026-02-26 05:52:11  DEBUG     [cachecontrol.controller]  22494 > 267
+2026-02-26 05:52:11  INFO      [app.middleware.auth_middleware]  Auth success  uid=GT8OYK8mLoMiQsHzTeVirSudIdC2  req_id=1fd814cd21264060b380e8e82a5ac094
+2026-02-26 05:52:11  INFO      [depresense.api]  Firestore READ on eeg_files → error
+2026-02-26 05:52:11  ERROR     [app.services.firestore_service]  Failed to get EEG file GT8OYK8mLoMiQsHzTeVirSudIdC2/4c1e393b12fd4bc1a351a235b820baf2: 403 Cloud Firestore API has not been used in project depresense before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [reason: "SERVICE_DISABLED"

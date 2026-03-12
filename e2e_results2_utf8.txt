@@ -1,0 +1,58 @@
+﻿[PASS] 1. Health Check: status=200 body={'status': 'ok', 'version': '1.0.0'}
+
+[PASS] 2. Firebase Health: firebase_connected=True
+
+[PASS] 3. Model Health: model_loaded=True
+
+[FAIL] 4. Signup (new user): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=20)
+
+[FAIL] 5. Login: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=20)
+
+[FAIL] 6. Auth/Me (token validation): No token from login
+
+[FAIL] 7. EEG File Upload: No token
+
+[FAIL] 8. List EEG Files: No token
+
+[FAIL] 9. Run Prediction: Missing token=False file_id=None
+
+[FAIL] 10. Prediction History: No token
+
+[FAIL] 11. Invalid Login (wrong password): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=15)
+
+[FAIL] 12. Invalid File Upload (.txt): No token
+
+[FAIL] 13. Unauthorized Access (no token): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=5)
+
+[FAIL] 14. Logout: No token
+
+============================================================
+RESULTS: 3/14 tests passed
+============================================================
+  [PASS ] 1. Health Check
+  [PASS ] 2. Firebase Health
+  [PASS ] 3. Model Health
+  [FAIL ] 4. Signup (new user)
+  [FAIL ] 5. Login
+  [FAIL ] 6. Auth/Me (token validation)
+  [FAIL ] 7. EEG File Upload
+  [FAIL ] 8. List EEG Files
+  [FAIL ] 9. Run Prediction
+  [FAIL ] 10. Prediction History
+  [FAIL ] 11. Invalid Login (wrong password)
+  [FAIL ] 12. Invalid File Upload (.txt)
+  [FAIL ] 13. Unauthorized Access (no token)
+  [FAIL ] 14. Logout
+
+Failed tests:
+  - 4. Signup (new user): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=20)
+  - 5. Login: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=20)
+  - 6. Auth/Me (token validation): No token from login
+  - 7. EEG File Upload: No token
+  - 8. List EEG Files: No token
+  - 9. Run Prediction: Missing token=False file_id=None
+  - 10. Prediction History: No token
+  - 11. Invalid Login (wrong password): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=15)
+  - 12. Invalid File Upload (.txt): No token
+  - 13. Unauthorized Access (no token): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=5)
+  - 14. Logout: No token

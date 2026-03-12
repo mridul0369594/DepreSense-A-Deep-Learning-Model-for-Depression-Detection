@@ -1,0 +1,38 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-8.3.4, pluggy-1.6.0
+rootdir: D:\Study\0. degree\Last Year\DepreSense Project\DepreSense-main\backend
+configfile: pytest.ini
+plugins: anyio-4.12.1, Faker-40.5.1, asyncio-0.25.2, cov-7.0.0, mock-3.15.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=session
+collected 114 items
+
+tests\test_api_local.py ..........                                       [  8%]
+tests\test_auth.py ...............                                       [ 21%]
+tests\test_eeg.py ...............                                        [ 35%]
+tests\test_error_handling.py ...................                         [ 51%]
+tests\test_health.py ........                                            [ 58%]
+tests\test_integration.py ............                                   [ 69%]
+tests\test_predictions.py ..............                                 [ 81%]
+tests\test_services.py .....................                             [100%]
+
+============================== warnings summary ===============================
+tests/test_api_local.py::test_root
+  D:\Study\0. degree\Last Year\DepreSense Project\DepreSense-main\backend\app\main.py:55: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @app.on_event("startup")
+
+tests/test_api_local.py::test_root
+  D:\Study\0. degree\Last Year\DepreSense Project\DepreSense-main\backend\app\main.py:90: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @app.on_event("shutdown")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+====================== 114 passed, 2 warnings in 22.39s =======================

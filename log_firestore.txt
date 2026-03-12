@@ -1,0 +1,7 @@
+message: "Cloud Firestore API has not been used in project depresense before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+  url: "https://console.developers.google.com/apis/api/firestore.googleapis.com/overview?project=depresense"
+2026-02-26 06:15:33  INFO      [depresense.api]  → GET /predictions/history  req_id=ae35b0cf2ad245b0a8bbf172d58f9b49
+2026-02-26 06:15:34  INFO      [depresense.api]  Firestore LIST on predictions → error
+2026-02-26 06:15:34  ERROR     [app.services.firestore_service]  Failed to list predictions for GT8OYK8mLoMiQsHzTeVirSudIdC2: 404 The database (default) does not exist for project depresense Please visit https://console.cloud.google.com/datastore/setup?project=depresense to add a Cloud Datastore or Cloud Firestore database. 
+--- ERRORS ---
+2026-02-26 06:15:34  ERROR     [app.services.firestore_service]  Failed to list predictions for GT8OYK8mLoMiQsHzTeVirSudIdC2: 404 The database (default) does not exist for project depresense Please visit https://console.cloud.google.com/datastore/setup?project=depresense to add a Cloud Datastore or Cloud Firestore database. 

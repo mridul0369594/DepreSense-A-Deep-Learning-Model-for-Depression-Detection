@@ -1,0 +1,55 @@
+﻿[PASS] 1. Health Check: status=200 body={'status': 'ok', 'version': '1.0.0'}
+
+[PASS] 2. Firebase Health: firebase_connected=True
+
+[PASS] 3. Model Health: model_loaded=True
+
+[PASS] 4. Signup (new user): status=201, email=e2e_1772057111@gmail.com, token_len=954
+
+[PASS] 5. Login: status=200, uid=GT8OYK8mLoMiQsHzTeVirSudIdC2, email=depresense.e2e.test@gmail.com, token_len=968
+
+[PASS] 6. Auth/Me (token validation): uid=GT8OYK8mLoMiQsHzTeVirSudIdC2, email=depresense.e2e.test@gmail.com, name=E2E Test User
+
+[FAIL] 7. EEG File Upload: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=60)
+
+[FAIL] 8. List EEG Files: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)
+
+[FAIL] 9. Run Prediction: Missing token=True file_id=None
+
+[FAIL] 10. Prediction History: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)
+
+[FAIL] 11. Invalid Login (wrong password): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=15)
+
+[FAIL] 12. Invalid File Upload (.txt): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)
+
+[FAIL] 13. Unauthorized Access (no token): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=5)
+
+[FAIL] 14. Logout: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)
+
+============================================================
+RESULTS: 6/14 tests passed
+============================================================
+  [PASS ] 1. Health Check
+  [PASS ] 2. Firebase Health
+  [PASS ] 3. Model Health
+  [PASS ] 4. Signup (new user)
+  [PASS ] 5. Login
+  [PASS ] 6. Auth/Me (token validation)
+  [FAIL ] 7. EEG File Upload
+  [FAIL ] 8. List EEG Files
+  [FAIL ] 9. Run Prediction
+  [FAIL ] 10. Prediction History
+  [FAIL ] 11. Invalid Login (wrong password)
+  [FAIL ] 12. Invalid File Upload (.txt)
+  [FAIL ] 13. Unauthorized Access (no token)
+  [FAIL ] 14. Logout
+
+Failed tests:
+  - 7. EEG File Upload: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=60)
+  - 8. List EEG Files: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)
+  - 9. Run Prediction: Missing token=True file_id=None
+  - 10. Prediction History: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)
+  - 11. Invalid Login (wrong password): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=15)
+  - 12. Invalid File Upload (.txt): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)
+  - 13. Unauthorized Access (no token): HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=5)
+  - 14. Logout: HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=10)

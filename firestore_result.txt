@@ -1,0 +1,26 @@
+﻿============================================================
+FIRESTORE PERSISTENCE VERIFICATION
+============================================================
+
+1. Login: 200 OK
+2. Upload: 201, file_id=354501a13f31466ab4651e0ead79256f
+3. File listing: 200, total=1 files
+   -> FIRESTORE OK: file_id=354501a13f31466ab4651e0ead79256f, original=verify_test.edf
+4. Prediction: 201
+   -> Probability: 0.9942
+   -> Risk Level:  high
+   -> Confidence:  0.9883
+   -> Top Features: ['Cz', 'F7', 'Fz', 'P4', 'C4']
+   -> Time: 6.1s
+5. Prediction History: 200, count=1
+   -> FIRESTORE OK: Latest prediction persisted!
+      prob=0.9942, risk=high
+6. Get Prediction by ID: 200
+   -> FIRESTORE OK: Prediction 0e3e1f57feef... retrieved
+
+============================================================
+RESULT: FIRESTORE FULLY OPERATIONAL
+  - File metadata persists to Firestore
+  - Prediction history persists to Firestore
+  - All CRUD operations working
+============================================================

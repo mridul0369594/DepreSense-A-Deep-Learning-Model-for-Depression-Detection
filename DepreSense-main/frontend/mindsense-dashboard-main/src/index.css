@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DepreSense Design System
+   Primary: Pink/Magenta (#D63384)
+   Sidebar: Dark purple-black (#1A1A2E)
+   All colors in HSL format
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    /* Primary Pink/Magenta - #D63384 */
+    --primary: 330 69% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 15%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 46%;
+
+    --accent: 330 69% 96%;
+    --accent-foreground: 330 69% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success green for low likelihood */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning/High likelihood */
+    --warning: 0 84% 60%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 330 69% 52%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar - Dark purple-black #1A1A2E */
+    --sidebar-background: 240 27% 14%;
+    --sidebar-foreground: 240 5% 90%;
+    --sidebar-primary: 330 69% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 20% 20%;
+    --sidebar-accent-foreground: 240 5% 90%;
+    --sidebar-border: 240 20% 20%;
+    --sidebar-ring: 330 69% 52%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 330 69% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 330 69% 20%;
+    --accent-foreground: 330 69% 80%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 0 62% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
+    --ring: 330 69% 52%;
+
+    --sidebar-background: 240 27% 10%;
+    --sidebar-foreground: 240 5% 90%;
+    --sidebar-primary: 330 69% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 20% 15%;
+    --sidebar-accent-foreground: 240 5% 90%;
+    --sidebar-border: 240 20% 15%;
+    --sidebar-ring: 330 69% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(330 69% 52% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(330 69% 52% / 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}

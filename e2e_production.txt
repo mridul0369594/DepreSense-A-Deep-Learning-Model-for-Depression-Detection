@@ -1,0 +1,47 @@
+﻿[PASS] 1. Health Check: status=200 body={'status': 'ok', 'version': '1.0.0'}
+
+[PASS] 2. Firebase Health: firebase_connected=True
+
+[PASS] 3. Model Health: model_loaded=True
+
+[PASS] 4. Signup (new user): status=201, email=e2e_1772058197@gmail.com, token_len=954
+
+[PASS] 5. Login: status=200, uid=GT8OYK8mLoMiQsHzTeVirSudIdC2, email=depresense.e2e.test@gmail.com, token_len=968
+
+[PASS] 6. Auth/Me (token validation): uid=GT8OYK8mLoMiQsHzTeVirSudIdC2, email=depresense.e2e.test@gmail.com, name=E2E Test User
+
+[PASS] 7. EEG File Upload: status=201, file_id=5601a6960d264669b6c6f99370fdf8ae, filename=5601a6960d264669b6c6f99370fdf8ae.edf
+
+[PASS] 8. List EEG Files: status=200, 2 file(s)
+
+[PASS] 9. Run Prediction: prob=0.9942, risk=high, confidence=0.9883, top_features=['Cz', 'F7', 'Fz', 'P4', 'C4'], time=5.7s, pred_id=d81deb79a6e24d8ebc83665889456169
+
+[PASS] 10. Prediction History: status=200, 2 prediction(s) in history
+
+[PASS] 11. Invalid Login (wrong password): status=401, error_msg='Authentication failed. Please check your credentials and try again.'
+
+[PASS] 12. Invalid File Upload (.txt): status=400, correctly rejected: Only .edf files are accepted.
+
+[PASS] 13. Unauthorized Access (no token): status=401, msg='Authorization header with Bearer token is required.'
+
+[PASS] 14. Logout: status=200, msg='Logged out successfully'
+
+============================================================
+RESULTS: 14/14 tests passed
+============================================================
+  [PASS ] 1. Health Check
+  [PASS ] 2. Firebase Health
+  [PASS ] 3. Model Health
+  [PASS ] 4. Signup (new user)
+  [PASS ] 5. Login
+  [PASS ] 6. Auth/Me (token validation)
+  [PASS ] 7. EEG File Upload
+  [PASS ] 8. List EEG Files
+  [PASS ] 9. Run Prediction
+  [PASS ] 10. Prediction History
+  [PASS ] 11. Invalid Login (wrong password)
+  [PASS ] 12. Invalid File Upload (.txt)
+  [PASS ] 13. Unauthorized Access (no token)
+  [PASS ] 14. Logout
+
+All tests passed!

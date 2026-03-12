@@ -1,0 +1,35 @@
+# ── Version control ────────────────────────────────────────
+.git/
+.gitignore
+
+# ── IDE / Editor ───────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Python caches ──────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+
+# ── Environment files (loaded at runtime via env_file) ─────
+.env
+
+# ── Development files ──────────────────────────────────────
+Makefile
+README.md
+TESTING_GUIDE.md
+docker-compose.yml
+
+# ── Runtime data (don't bake into image) ───────────────────
+logs/
+uploads/
+
+# ── Virtual environments ──────────────────────────────────
+venv/
+env/
+.venv/

@@ -1,0 +1,15 @@
+﻿py :   File "<string>", line 26
+At line:1 char:1
++ py -c "
++ ~~~~~~~
+    + CategoryInfo          : NotSpecified: 
+    (  File "<string>", line 26:String) []  
+  , RemoteException
+    + FullyQualifiedErrorId : NativeCommand 
+   Error
+ 
+    print(f'   -> File found in Firestore: 
+{found[0][" filename\]},
+          ^
+SyntaxError: unterminated string literal 
+(detected at line 26)

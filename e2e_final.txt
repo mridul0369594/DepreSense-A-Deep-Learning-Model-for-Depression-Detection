@@ -1,0 +1,48 @@
+﻿[PASS] 1. Health Check: status=200 body={'status': 'ok', 'version': '1.0.0'}
+
+[PASS] 2. Firebase Health: firebase_connected=True
+
+[PASS] 3. Model Health: model_loaded=True
+
+[PASS] 4. Signup (new user): status=201, email=e2e_1772057394@gmail.com, token_len=954
+
+[PASS] 5. Login: status=200, uid=GT8OYK8mLoMiQsHzTeVirSudIdC2, email=depresense.e2e.test@gmail.com, token_len=968
+
+[PASS] 6. Auth/Me (token validation): uid=GT8OYK8mLoMiQsHzTeVirSudIdC2, email=depresense.e2e.test@gmail.com, name=E2E Test User
+
+[PASS] 7. EEG File Upload: status=201, file_id=974e2aec95a543babaa77fd886f81b66, filename=974e2aec95a543babaa77fd886f81b66.edf
+
+[PASS] 8. List EEG Files: status=200, 7 file(s)
+
+[FAIL] 9. Run Prediction: status=201, body={"result":{"prediction_id":"48bc534de6c34490aa676e3db6de275a","depression_probability":0.9942,"risk_level":"high","confidence":0.9883,"timestamp":"2026-02-25T22:10:12.519146Z"},"explanation":{"feature_importance":{"Fp1":{"abs_importance":5.7e-05,"signed_importance":2.1e-05},"Fp2":{"abs_importance":5, time=7.2s
+
+[PASS] 10. Prediction History: status=200, 0 prediction(s) in history
+
+[PASS] 11. Invalid Login (wrong password): status=401, error_msg='Authentication failed. Please check your credentials and try again.'
+
+[PASS] 12. Invalid File Upload (.txt): status=400, correctly rejected: Only .edf files are accepted.
+
+[PASS] 13. Unauthorized Access (no token): status=401, msg='Authorization header with Bearer token is required.'
+
+[PASS] 14. Logout: status=200, msg='Logged out successfully'
+
+============================================================
+RESULTS: 13/14 tests passed
+============================================================
+  [PASS ] 1. Health Check
+  [PASS ] 2. Firebase Health
+  [PASS ] 3. Model Health
+  [PASS ] 4. Signup (new user)
+  [PASS ] 5. Login
+  [PASS ] 6. Auth/Me (token validation)
+  [PASS ] 7. EEG File Upload
+  [PASS ] 8. List EEG Files
+  [FAIL ] 9. Run Prediction
+  [PASS ] 10. Prediction History
+  [PASS ] 11. Invalid Login (wrong password)
+  [PASS ] 12. Invalid File Upload (.txt)
+  [PASS ] 13. Unauthorized Access (no token)
+  [PASS ] 14. Logout
+
+Failed tests:
+  - 9. Run Prediction: status=201, body={"result":{"prediction_id":"48bc534de6c34490aa676e3db6de275a","depression_probability":0.9942,"risk_level":"high","confidence":0.9883,"timestamp":"2026-02-25T22:10:12.519146Z"},"explanation":{"feature_importance":{"Fp1":{"abs_importance":5.7e-05,"signed_importance":2.1e-05},"Fp2":{"abs_importance":5, time=7.2s
