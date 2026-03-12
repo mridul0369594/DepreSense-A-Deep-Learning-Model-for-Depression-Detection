@@ -1,0 +1,38 @@
+# Ignore files for gcloud builds submit
+# (used when building backend Docker image from DepreSense-main/ context)
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Frontend node_modules (not needed in backend image)
+frontend/mindsense-dashboard-main/node_modules/
+frontend/mindsense-dashboard-main/dist/
+
+# Data files (EEG training data, not needed in production)
+data/
+
+# Logs and uploads
+backend/logs/
+backend/uploads/
+
+# Development files
+*.md
+!backend/app/**
+backend/tests/
+backend/docker-compose.yml
+backend/Makefile
+backend/pytest.ini

@@ -8,11 +8,19 @@ Initialises the Firebase Admin SDK and exposes three helpers:
 
 A lightweight ``check_firebase_connection()`` function is also provided so
 that the /health/firebase endpoint can return a real status.
+
+Credentials can be supplied in two ways (checked in order):
+    1. ``FIREBASE_CREDENTIALS_JSON`` env var – a JSON string of the
+       service-account key (used on Render / cloud platforms).
+    2. ``FIREBASE_CREDENTIALS_PATH`` setting – path to a JSON key file
+       (used for local development).
 """
 
 from __future__ import annotations
 
+import json
 import logging
+import os
 
 import firebase_admin
 from firebase_admin import auth, credentials, firestore, storage
@@ -36,7 +44,17 @@ def _init_firebase() -> None:
         return  # already initialised
 
     try:
-        cred = credentials.Certificate(settings.FIREBASE_CREDENTIALS_PATH)
+        # Priority 1: JSON string from environment variable
+        creds_json = os.environ.get("FIREBASE_CREDENTIALS_JSON")
+        if creds_json:
+            cert_dict = json.loads(creds_json)
+            cred = credentials.Certificate(cert_dict)
+            logger.info("Using Firebase credentials from FIREBASE_CREDENTIALS_JSON env var.")
+        else:
+            # Priority 2: File path from settings
+            cred = credentials.Certificate(settings.FIREBASE_CREDENTIALS_PATH)
+            logger.info("Using Firebase credentials from file: %s", settings.FIREBASE_CREDENTIALS_PATH)
+
         _firebase_app = firebase_admin.initialize_app(cred)
         db_client = firestore.client()
         storage_client = storage
@@ -46,7 +64,7 @@ def _init_firebase() -> None:
             "Firebase credentials file not found at: %s",
             settings.FIREBASE_CREDENTIALS_PATH,
         )
-    except ValueError as exc:
+    except (json.JSONDecodeError, ValueError) as exc:
         logger.error("Invalid Firebase credentials: %s", exc)
     except Exception as exc:  # noqa: BLE001
         logger.error("Failed to initialise Firebase: %s", exc)

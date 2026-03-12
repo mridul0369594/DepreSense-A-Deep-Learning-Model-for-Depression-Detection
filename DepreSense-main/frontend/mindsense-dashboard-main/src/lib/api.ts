@@ -1,11 +1,14 @@
 /**
  * API helper for communicating with the DepreSense backend.
  *
- * All paths are prefixed with `/api` which Vite's dev-server proxy
- * rewrites to `http://localhost:8000`.
+ * In development: paths are prefixed with `/api` which Vite's dev-server
+ * proxy rewrites to `http://localhost:8000`.
+ *
+ * In production: VITE_API_BASE_URL points directly to the Cloud Run URL
+ * (e.g. https://depresense-backend-xxxxx.run.app).
  */
 
-const API_BASE = "/api";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "/api";
 
 export interface ApiError {
     code: string;

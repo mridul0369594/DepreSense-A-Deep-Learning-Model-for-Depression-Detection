@@ -1,0 +1,29 @@
+# Render.com Blueprint — Infrastructure as Code
+# Deploy: Connect your GitHub repo to Render, or use render.yaml
+
+services:
+  - type: web
+    name: depresense-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    region: oregon
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DEBUG
+        value: "false"
+      - key: LOG_LEVEL
+        value: "WARNING"
+      - key: ALLOWED_ORIGINS
+        value: "https://depresense.web.app,https://depresense.firebaseapp.com"
+      - key: MODEL_PATH
+        value: "./output/model"
+      - key: SHAP_BG_PATH
+        value: "./output/assets/shap_bg_ec.npy"
+      - key: FIREBASE_CREDENTIALS_PATH
+        value: "config/firebase-service-account.json"
+      - key: UPLOAD_DIR
+        value: "/tmp/uploads"
+      - key: MAX_FILE_SIZE_MB
+        value: "100"
