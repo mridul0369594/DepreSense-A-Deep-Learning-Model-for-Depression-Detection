@@ -183,71 +183,15 @@ system_logs/
 
 ---
 
+## 👥 Contributors
 
-☁ Deployment
-
-Production architecture:
-
-Frontend → Firebase Hosting
-Backend → Google Cloud Run
-Database → Firestore
-Authentication → Firebase Auth
-
-✔ Serverless
-✔ Auto-scaling
-✔ Pay-per-use infrastructure
-
-🔒 Security
-
-• Firebase Authentication
-• Email OTP verification
-• JWT token authorization
-• Role-based access control
-• HTTPS encryption
-• Firestore security rules
-
-🧪 Testing
-
-Backend uses pytest with extensive unit tests covering:
-
-• Prediction pipeline
-• SHAP explainability
-• API endpoints
-• Data validation
-
-Run tests:
-
-cd backend
-pytest
-📂 Project Structure
-DepreSense
-│
-├── frontend
-│   ├── components
-│   ├── pages
-│   ├── services
-│   └── contexts
-│
-├── backend
-│   ├── routes
-│   ├── services
-│   ├── models
-│   ├── schemas
-│   └── tests
-│
-├── output
-│   ├── model
-│   └── assets
-│
-└── docs
-
-👥 Contributors
-Name	Role
-Mohamed Zeedhan	ML Lead
-Mridul Bhattacharjee	Backend Developer
-Mohamed Muzni Mohamed Ziham	Frontend Developer
-Rozin Khan	UI/UX Designer
-Syed Athif Usman	Data Scientist
+| Name | Role |
+|---|---|
+| Mohamed Zeedhan | ML Lead |
+| Mridul Bhattacharjee | Backend Developer |
+| Mohamed Muzni Mohamed Ziham | Frontend Developer |
+| Rozin Khan | UI/UX Designer |
+| Syed Athif Usman | Data Scientist |
 
 Taylor’s University — School of Computer Science
 
